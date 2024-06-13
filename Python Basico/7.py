@@ -23,5 +23,12 @@ elif lim1 > lim2:
 else:
     print("Os limites são iguais")
 
+print("Usando for...")
 for i in range(lim1, lim2+1, 2):
     print(i)
+    
+i = lim1
+print("Usando while...")
+while i >= lim1 and i <= lim2:
+    print(i)
+    i += 2
