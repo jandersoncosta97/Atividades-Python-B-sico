@@ -1,0 +1,20 @@
+N = int(input("Digite o tamanho de cada vetor: "))
+
+vetor1 = []*N
+vetor2 = []*N
+
+print("Primeiro vetor: ")
+for i in range(len(N)):
+    num = int(input(f"Digite o {i+1}° número inteiro para o primeiro vetor: "))
+    vetor1[i] = num
+
+print("Segundo vetor: ")
+for i in range(len(N)):
+    num = int(input(f"Digite o {i+1}° número inteiro para o segundo vetor: "))
+    vetor2[i] = num
+
+print("Vetor1: ", vetor1")
+print("Vetor2: ", vetor2")
+
+
+
