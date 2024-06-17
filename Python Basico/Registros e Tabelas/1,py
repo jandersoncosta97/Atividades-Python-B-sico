@@ -1,0 +1,70 @@
+# # Usando dicionários
+# n = int(input("Digite o tamanho da tabela de cursos: "))
+# while (n < 1):
+#     n = int(input("Tamanho deve ser inteiro e positivo. Tente novamente: "))
+# tab = {}
+
+# for i in range(n):
+#     codC = int(input("Digite o código de curso: "))
+#     while codC < 1:
+#         codC = int(input("Código de curso deve ser inteiro e positivo. Tente novamente: "))
+#     nomeC = input("Digite o nome do curso %s:\n" %(codC))
+#     centroC = input("Digite o nome do centro do curso %d:\n" %(codC))
+#     tab[codC] = (nomeC, centroC)
+
+
+# print("Tabela com %d cursos foi lida corretamente." % (n))
+# print("Tabela ->", tab)
+
+# codC = int(input("Digite o código para busca (<= 0 para parar): "))
+# while codC > 0:
+#     if codC in tab:
+#         nomeC, centroC = tab[codC]
+#         print("Curso %d é %s e seu Centro é %s." % (codC, nomeC, centroC))
+#     else:
+#         print("Curso %d não existe na tabela. " % (codC))
+#     codC = int(input("Digite outro código para busca (<=0 para parar): "))
+
+# print("Fim do programa")
+
+
+
+
+
+
+
+
+# Usando listas
+
+n = int(input("Digite o tamanho da tabela de cursos: "))
+while (n < 1):
+    n = int(input("Tamanho deve ser inteiro e positivo. Tente novamente: "))
+
+tab = [None]*n
+
+for i in range(n):
+    codC = int(input("Digite o código de curso: "))
+    while codC < 1:
+        codC = int(input("Código de curso deve ser inteiro e positivo. Tente novamente: "))
+    nomeC = input("Digite o nome do curso %s:\n" %(codC))
+    centroC = input("Digite o nome do centro do curso %d:\n" %(codC))
+    tab[i] = (codC, nomeC, centroC)
+
+
+print("Tabela com %d cursos foi lida corretamente." % (n))
+print("Tabela ->", tab)
+
+codC = int(input("Digite o código para busca (<= 0 para parar): "))
+
+while codC > 0:
+    i = 0
+    while (i < n) and (codC != tab[i][0]):
+        i += 1
+    if i < n:
+        nomeC, centroC = tab[i][1:]
+        print("O curso %d é %s e seu Centro é %s" % (codC, nomeC, centroC))
+    else:
+        print("Curso %d não existe na Tabela." % (codC))  
+
+    codC = int(input("Digite o código para busca (<= 0 para parar): ")) 
+print("Fim do programa")
