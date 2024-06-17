@@ -1,4 +1,5 @@
 Continuar os exercícios
 
 Registros e Tabelas:
-(1.py, 1.txt) # Realizar a representação de listas
+
+
