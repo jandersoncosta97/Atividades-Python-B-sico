@@ -19,7 +19,9 @@ while num > 100:
     while num < 100:
         num = int(input("N = "))
 """ 
-    
+
+
+
 def separa(num):
     l = []
     while num > 0:
@@ -29,17 +31,20 @@ def separa(num):
         print("Desmembrando: ", num, l)
     return l
 
+
 def verificacao(nu):
     lista = separa(nu)
-    for i in lista:
-        for j in lista[::-1]
-            if i == j:
+    lista_invertida = lista[::-1]
+    if lista_invertida == lista:
+        a = lista
+    return a
+
 
 n = int(input("Digite um número inteiro positivo (0 < num < 99999): "))
 while n > 99999:
     n = int(input("Digite um número inteiro positivo (0 < num < 99999): "))
 while n > 0:
-    res = contagem(n)
+    res = verificacao(n)
     print(n, res)
     n = int(input("Digite um número inteiro positivo (0 < num < 99999): "))
     while n > 99999:
