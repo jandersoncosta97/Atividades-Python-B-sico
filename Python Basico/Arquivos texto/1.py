@@ -14,21 +14,35 @@ with open('discip.new', 'w', encoding='utf-8') as f2:
                 creditos = 5
             f2.write(f'{codigo}     {nome} {creditos}              {(int(creditos)*15)}\n')
 
-f3 = open('discip.old', 'r', encoding='utf-8')
-f4 = open('discip.new', 'r', encoding='utf-8')
-
-numero_disciplinas_old = 0
-numero_disciplinas_new = 0
-
-for i in f3.readlines():
-    numero_disciplinas_old += 1
-for i in f4.readlines():
-    numero_disciplinas_new += 1
-
+try:
+    numero_disciplinas_old = 0
+    f3 = open('discip.old', 'r', encoding='utf-8')
+    for i in f3.readlines():
+        numero_disciplinas_old += 1
+    f3.close()
+except IOError as mensagem:
+    print("Erro ao lidar com arquivo -", mensagem)
+except:
+    print("Não foi possível ler o arquivo")
     
-f3.close()
-f4.close()
+
+
+try:
+    numero_disciplinas_new = 0
+    f4 = open('discip.new', 'r', encoding='utf-8')
+    for i in f4.readlines():
+        numero_disciplinas_new += 1
+    f4.close()
+except IOError as mensagem:
+    print("Erro ao lidar com arquivo -", mensagem)
+except:
+    print("Não foi possível ler o arquivo. ")
+    
+
+
 
 print(f"O número de disciplinas do arquivo 'discip.old' é {numero_disciplinas_old} \
 enquanto que o número de disciplinas do arquivo 'discip.new' é {numero_disciplinas_new-1} \ # -1 ocorre devido ao cabeçalho
 e o número de disciplinas com crédito modificado é {creditos_alterados}")
+
+
