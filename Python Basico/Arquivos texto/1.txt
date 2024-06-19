@@ -1,0 +1,15 @@
+with open('discip.old', 'r') as f1:
+    lista_linhas = f1.readlines()
+
+with open('discip.new', 'w') as f2:
+    for i in lista_linhas:
+        if 'IF125' in i or 'IF380' not in i:
+            conteudo = f2.read(i)
+            if 'MA' in i:
+                for j in i:
+                    conteudo.replace(j[-1], 5)
+    conteudo = conteudo.readlines()
+    for i in conteudo:
+        j = i.split()
+        i.write('   ', j[-1]*15)
+        
