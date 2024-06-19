@@ -52,7 +52,7 @@ for i in range(N):
         if i == unidade:
             d = unidade/1
             if d <= 3:
-                romano += 'I'*d
+                romano += 'I'*D
             elif d == 4:
                 romano += 'IV'
             elif d >= 5:
@@ -66,4 +66,3 @@ for i in range(N):
                     romano += 'I'*(d-d_)
 
     print(f'O número {x} em algarismo romano é {romano}')
-    

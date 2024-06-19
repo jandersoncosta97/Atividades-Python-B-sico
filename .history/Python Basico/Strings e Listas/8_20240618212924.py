@@ -6,51 +6,48 @@ for i in range(N):
     x = int(input("range: (0 < x < 4000). x = "))
     while x <= 0 or x > 4000:
         x = int(input("Valor fora do range (0 < x < 4000). x = "))
-    milar = x%10000 - x%1000 - x%100 - x%10
-    centena = x%1000 - x%100 - x%10
-    dezena = x%100 - x%10
-    unidade = x%10
+    milar = x // 1000
+    centena = (x % 1000) // 100
+    dezena = (x % 100) // 10
+    unidade = x % 10
 
     romano = ""
     for i in [milar, centena, dezena, unidade]:
         if i == milar:
-            a = milar/1000
-            if a == 1:
-                romano += 'M'*a
-            elif a == 2:
-                romano += 'M'*a
-            elif a == 3:
-                romano += 'M'*a
+            if i == 1:
+                romano += 'M'*i
+            elif i == 2:
+                romano += 'M'*i
+            elif i == 3:
+                romano += 'M'*i
         if i == centena:
-            b = centena/100
-            b_ = 5
-            if b >= b_:
-                if b-b_ == 4:
+            i_ = 5
+            if i >= i_:
+                if i-i_ == 4:
                     romano += 'CM'
-                elif (b-b_) <= 3:
+                elif (i-i_) <= 3:
                     romano += 'D'
-                    romano += 'C'*(b-b_)
+                    romano += 'C'*(i-i_)
             else:
-                if b == 4:
+                if i == 4:
                     romano += 'CD'
                 else:
-                    romano += 'C'*b
+                    romano += 'C'*i
         if i == dezena:
-            c = dezena/10
-            c_ = 5
-            if c >= c_:
+            i_ = 5
+            if i >= i_:
                 if b-b_ == 4:
                     romano += 'XC'
                 elif b-b_ <= 3:
                     romano += 'L'
                     romano += 'X'*(b-b_)
             else:
-                if c == 4:
+                if i == 4:
                     romano += 'XL'
                 else:
                     romano += 'X'*c
         if i == unidade:
-            d = unidade/1
+            d = unidade
             if d <= 3:
                 romano += 'I'*d
             elif d == 4:

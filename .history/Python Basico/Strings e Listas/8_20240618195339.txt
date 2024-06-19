@@ -1,0 +1,8 @@
+N = int(input("Digite um número inteiro positivo: "))
+while N <= 0:
+    N = int(input("O número precisa ser inteiro e positivo: ))
+
+for i in range(N):
+    x = int(input("x = (0 < x < 4000): "))
+    while x <= 0 or x > 4000:
+        x = int(input("Valor fora do range x = : "))

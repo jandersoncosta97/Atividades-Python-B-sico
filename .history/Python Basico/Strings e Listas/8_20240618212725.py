@@ -6,23 +6,22 @@ for i in range(N):
     x = int(input("range: (0 < x < 4000). x = "))
     while x <= 0 or x > 4000:
         x = int(input("Valor fora do range (0 < x < 4000). x = "))
-    milar = x%10000 - x%1000 - x%100 - x%10
-    centena = x%1000 - x%100 - x%10
-    dezena = x%100 - x%10
-    unidade = x%10
+    milar = x // 1000
+    centena = (x % 1000) // 100
+    dezena = (x % 100) // 10
+    unidade = x % 10
 
     romano = ""
     for i in [milar, centena, dezena, unidade]:
         if i == milar:
-            a = milar/1000
-            if a == 1:
+            if i 1:
                 romano += 'M'*a
-            elif a == 2:
+            elif i 2:
                 romano += 'M'*a
-            elif a == 3:
+            elif i 3:
                 romano += 'M'*a
         if i == centena:
-            b = centena/100
+            b = centena
             b_ = 5
             if b >= b_:
                 if b-b_ == 4:
@@ -36,7 +35,7 @@ for i in range(N):
                 else:
                     romano += 'C'*b
         if i == dezena:
-            c = dezena/10
+            c = dezena
             c_ = 5
             if c >= c_:
                 if b-b_ == 4:
@@ -50,7 +49,7 @@ for i in range(N):
                 else:
                     romano += 'X'*c
         if i == unidade:
-            d = unidade/1
+            d = unidade
             if d <= 3:
                 romano += 'I'*d
             elif d == 4:

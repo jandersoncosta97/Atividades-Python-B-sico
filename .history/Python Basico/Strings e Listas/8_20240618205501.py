@@ -7,8 +7,8 @@ for i in range(N):
     while x <= 0 or x > 4000:
         x = int(input("Valor fora do range (0 < x < 4000). x = "))
     milar = x%10000 - x%1000 - x%100 - x%10
-    centena = x%1000 - x%100 - x%10
-    dezena = x%100 - x%10
+    centena = x%1000 - x100 - x%10
+    dezena = x100 - x%10
     unidade = x%10
 
     romano = ""
@@ -52,7 +52,7 @@ for i in range(N):
         if i == unidade:
             d = unidade/1
             if d <= 3:
-                romano += 'I'*d
+                romano += 'I'*D
             elif d == 4:
                 romano += 'IV'
             elif d >= 5:
@@ -66,4 +66,3 @@ for i in range(N):
                     romano += 'I'*(d-d_)
 
     print(f'O número {x} em algarismo romano é {romano}')
-    

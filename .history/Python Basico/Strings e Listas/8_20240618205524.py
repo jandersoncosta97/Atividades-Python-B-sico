@@ -52,7 +52,7 @@ for i in range(N):
         if i == unidade:
             d = unidade/1
             if d <= 3:
-                romano += 'I'*d
+                romano += 'I'*D
             elif d == 4:
                 romano += 'IV'
             elif d >= 5:
