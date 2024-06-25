@@ -20,17 +20,17 @@ while (num != 0) and (qtd < ma):
     while num > 0:
         num = int(input("Número: "))
         
-if qtd >= ma:
+if qtd > ma:
     print('Capacidade de armazenamento esgotada. ')
 
 if qtd2d == 0:
-    print("Nenhum número de 2 digitos (entre -10 e -99), que sejam multiplos de 5 e negativos, encontrado.")
+    print("Nenhum número de 2 digitos digitado.")
 else:
     lis = lis[:qtd2d]  # Maneira pythônica. Também é possível fazer usando loop 'for' (inverter uma lista usando loop 'for')
     lis.reverse()
-    print(f"Lista com os números digitados entre -10 e -99, multiplos de 5 e negativos: {lis}")
+    print("Lista com os números digitados entre -10 e -99, multiplos de 5{lis}")
 if maior7 == -9999999999999999999999999999999:
     print('Nenhum número não multiplo de 7 digitado')
 else:
-    print('Maior número digitado não multiplo de 7 foi', maior7)
+    print('Maior número digitado não multiplo de 7 é', maior7)
     

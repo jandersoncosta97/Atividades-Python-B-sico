@@ -35,4 +35,3 @@ for i in range(n):
     while pontos < 0:
         pontos = int(input("Pontos: "))
     MelhoresClientes(nomeEmp, pontos)
-    

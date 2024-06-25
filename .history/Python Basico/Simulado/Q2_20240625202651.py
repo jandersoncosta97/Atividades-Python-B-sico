@@ -20,7 +20,7 @@ while (num != 0) and (qtd < ma):
     while num > 0:
         num = int(input("Número: "))
         
-if qtd >= ma:
+if qtd > ma:
     print('Capacidade de armazenamento esgotada. ')
 
 if qtd2d == 0:
